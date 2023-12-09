@@ -1,6 +1,7 @@
 const ethers = require("ethers");
 const axios = require("axios");
-const { BACKEND_URL, DASHBOARD_URL } = require("./constant");
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const DASHBOARD_URL = process.env.NEXT_PUBLIC_DASHBOARD_URL;
 
 if (typeof window !== "undefined") {
   if (typeof window?.ethereum !== "undefined") {
