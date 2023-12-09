@@ -51,7 +51,6 @@ export const signMessage = async () => {
   if (res.result) {
     localStorage.setItem("token", res.tokens.access);
     // change the domain to DASHBOARD_URL and pass the token as a query parameter
-    console.log(`${DASHBOARD_URL}/?token=${res.tokens.access}`);
     document.location = `${DASHBOARD_URL}/?token=${res.tokens.access}`;
   }
 };

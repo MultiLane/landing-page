@@ -1,5 +1,5 @@
 "use client";
-import VideoThumb from "@/public/images/hero-image.png";
+import VideoThumb from "@/public/images/hero-image.jpg";
 import ModalVideo from "@/components/modal-video";
 import { signMessage } from "@/blockchain";
 
