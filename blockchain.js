@@ -25,5 +25,31 @@ const api = async (path, type, payload) => {
 };
 
 export const signMessage = async () => {
+  // connect to MetaMask
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  await window.ethereum.request({ method: "eth_requestAccounts" });
+  // get the user's accounts
+  const accounts = await provider.listAccounts();
+  // get the user's first account
+  const signer = provider.getSigner(accounts[0]);
 
+  // create the message to sign
+  let nonce = await api("api/login/", "GET", {
+    address: await signer.getAddress(),
+  });
+  // sign the message
+  let message = `Welcome to MultiLane.\nSign this message to login.\nNonce: ${ethers.utils.id(
+    String(nonce.nonce)
+  )}`;
+  const signature = await signer.signMessage(message);
+  // print the signature
+  let res = await api("api/login/", "POST", {
+    address: await signer.getAddress(),
+    signature: signature,
+  });
+  if (res.result) {
+    localStorage.setItem("token", res.tokens.access);
+    // change the domain to DASHBOARD_URL and pass the token as a query parameter
+    document.location = `${DASHBOARD_URL}/?token=${res.tokens.access}`;
+  }
 };
