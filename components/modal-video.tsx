@@ -50,10 +50,7 @@ export default function ModalVideo({
               viewBox='0 0 768 432'
               xmlns='http://www.w3.org/2000/svg'
               xmlnsXlink='http://www.w3.org/1999/xlink'
-            >
-
-
-            </svg>
+            ></svg>
           </div>
           <button
             className='absolute top-full flex items-center transform -translate-y-1/2 bg-white rounded-full font-medium group p-4 shadow-lg'
@@ -105,14 +102,13 @@ export default function ModalVideo({
             leaveTo='opacity-0 scale-95'
           >
             <div className='max-w-6xl mx-auto h-full flex items-center'>
-              <Dialog.Panel className='w-full max-h-full aspect-video bg-black overflow-hidden'>
-                <iframe
-                  width='1120'
-                  height='630'
-                  src='https://www.youtube.com/embed/U6LDMJ2pdvk?si=wCDuX742aUQVZO7F'
-                  title='YouTube video player'
-                ></iframe>
-              </Dialog.Panel>
+              <iframe
+                width='560'
+                height='315'
+                src='https://www.youtube.com/embed/BRgIKU2CQ60?si=4ECvxFKYo0iXRa89'
+                title='YouTube video player'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+              ></iframe>
             </div>
           </Transition.Child>
           {/* End: Modal dialog */}
