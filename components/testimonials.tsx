@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TestimonialImage from "@/public/images/testimonial.jpg";
+import Arcana from "@/public/images/arcana.png";
 
 export default function Testimonials() {
   return (
@@ -58,10 +59,7 @@ export default function Testimonials() {
 
             {/* Item */}
             <div className='flex items-center justify-center py-2 col-span-2 md:col-auto'>
-              <img
-                src='https://moonbeam.network/wp-content/uploads/2021/10/biconomy-new-500.png'
-                alt='Biconomy'
-              />
+              <Image src={Arcana} alt='Arcana' />
             </div>
 
             {/* Item */}
