@@ -103,8 +103,8 @@ export default function ModalVideo({
           >
             <div className='max-w-6xl mx-auto h-full flex items-center'>
               <iframe
-                width='560'
-                height='315'
+                width='1120'
+                height='630'
                 src='https://www.youtube.com/embed/BRgIKU2CQ60?si=4ECvxFKYo0iXRa89'
                 title='YouTube video player'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
