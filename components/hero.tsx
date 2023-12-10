@@ -58,7 +58,7 @@ export default function Hero() {
                 data-aos-delay='150'
               >
                 Make assets interoperable & chain agnostic{" "}
-                <strong>without Bridging</strong>
+                <strong>without traditional bridging</strong>
               </p>
               <div
                 className='max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center'
